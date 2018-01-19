@@ -10,7 +10,21 @@ namespace GitExecuter
     {
         public void Execute(string command, string param)
         {
-            Process.Start("git", "commit -m \"Initial commit\"");
+            switch (command)
+            {
+                case "add":
+                    Process.Start("git", "add -A");
+                    break;
+                case "commit":
+                    Process.Start("git", $"commit -m \"{param}\"");
+                    break;
+                case "pull":
+                    Process.Start("git", $"pull");
+                    break;
+                case "push":
+                    Process.Start("git", $"push {param}");
+                    break;
+            }
         }
     }
 }

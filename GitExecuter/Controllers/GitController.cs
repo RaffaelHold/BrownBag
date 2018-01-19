@@ -11,10 +11,10 @@ namespace GitExecuter.Controllers
     {
         // GET api/values
         [HttpGet]
-        public void Get(/*string command, string argument*/)
+        public void Get(string command, string argument)
         {
             var executor = new GitExecutor();
-            executor.Execute("", "");
+            executor.Execute("command", "argument");
         }
     }
 }
