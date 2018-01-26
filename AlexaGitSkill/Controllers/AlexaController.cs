@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
+using AlexaGitSkill.Speechlets;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AlexaGitSkill.Controllers
@@ -9,11 +11,11 @@ namespace AlexaGitSkill.Controllers
     [Route("api/[controller]")]
     public class AlexaController : Controller
     {
-        // GET api/values
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpPost]
+        public async Task<HttpResponseMessage> Service()
         {
-            return new string[] { "value1", "value2" };
+            var speechlet = new GitSpeechlet();
+            return await speechlet.GetResponseAsync(Request);
         }
     }
 }

@@ -1,20 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 
 namespace GitExecuter.Controllers
 {
     [Route("api/[controller]")]
     public class GitController : Controller
     {
-        // GET api/values
+        // GET api/git
         [HttpGet]
         public void Get(string command, string argument)
         {
             var executor = new GitExecutor();
-            executor.Execute("command", "argument");
+            executor.Execute(command, argument);
         }
     }
 }

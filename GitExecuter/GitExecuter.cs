@@ -12,16 +12,16 @@ namespace GitExecuter
         {
             switch (command)
             {
-                case "add":
+                case "Add":
                     Process.Start("git", "add -A");
                     break;
-                case "commit":
+                case "Commit":
                     Process.Start("git", $"commit -m \"{param}\"");
                     break;
-                case "pull":
+                case "Pull":
                     Process.Start("git", $"pull");
                     break;
-                case "push":
+                case "Push":
                     Process.Start("git", $"push {param}");
                     break;
             }
