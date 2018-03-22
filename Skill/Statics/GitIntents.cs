@@ -7,6 +7,7 @@ namespace Skill.Statics
 {
     public class GitIntents
     {
+        public const string Status = "Status";
         public const string Push = "Push";
         public const string Commit = "Commit";
         public const string Add = "Add";

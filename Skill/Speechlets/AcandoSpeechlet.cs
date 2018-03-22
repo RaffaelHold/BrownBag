@@ -22,7 +22,7 @@ namespace Skill.Speechlets
                 case AcandoIntents.ImDone:
                     return BuildAudioResponse("https://shop.it-hold.de/imdone.mp3");
                 case AcandoIntents.GetStatusHenning:
-                    return BuildSpeechletResponse("Okay", "Hans Henning Hoffmann is in the office today but he is currently in a meeting with the title Alexa - git push. He will be avaliable at 1pm", true);
+                    return BuildSpeechletResponse("Okay", "Hans Henning Hoffmann is in the office today but he is currently in a meeting with the title Alexa - git push. He will be available at 1pm", true);
                 case AcandoIntents.GetStatusProkscha:
                     return BuildSpeechletResponse("Okay", "Waldemar Prokscha is not in the office today. His current status is offline 40 days", true);
                 case AcandoIntents.GetStatusKnuth:

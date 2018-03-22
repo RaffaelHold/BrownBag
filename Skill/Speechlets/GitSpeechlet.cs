@@ -39,6 +39,8 @@ namespace Skill.Speechlets
 
             switch (intent.Name)
             {
+                case GitIntents.Status:
+                    return BuildSpeechletResponse("Okay", "The file changes dot txt has been modified.", true);
                 case GitIntents.Add:
                     result = "All changes have been staged.";
                     break;
