@@ -46,7 +46,7 @@ namespace Skill.Speechlets
                 case GitIntents.Commit:
                     intent.Slots.TryGetValue(GitSlots.CommitMessage, out slot);
                     argument = slot?.Value;
-                    result = "I commited your changes.";
+                    result = "I committed your changes.";
                     break;
                 case GitIntents.Pull:
 
