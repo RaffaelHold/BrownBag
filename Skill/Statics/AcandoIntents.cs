@@ -8,5 +8,9 @@ namespace Skill.Statics
     public class AcandoIntents
     {
         public const string WhoAreWe = "WhoAreWe";
+        public const string GetStatusHenning = "GetStatusHenning";
+        public const string GetStatusProkscha = "GetStatusProkscha";
+        public const string GetStatusKnuth = "GetStatusKnuth";
+        public const string ImDone = "ImDone";
     }
 }
