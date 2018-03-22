@@ -54,7 +54,7 @@ namespace Skill.Speechlets
                 case GitIntents.Push:
                     intent.Slots.TryGetValue(GitSlots.RemoteBranch, out Slot branchSlot);
                     intent.Slots.TryGetValue(GitSlots.RemoteRepository, out Slot repositorySlot);
-                    argument = repositorySlot?.Value + "/" + branchSlot?.Value;
+                    argument = repositorySlot?.Value + " " + branchSlot?.Value;
                     result = $"I successfully pushed your changes to {repositorySlot?.Value} {branchSlot?.Value}.";
                     break;
             }
