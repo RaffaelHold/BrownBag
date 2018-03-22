@@ -37,14 +37,13 @@ namespace Skill.Speechlets
             var command = intent.Name;
             var argument = String.Empty;
 
-            Slot slot;
             switch (intent.Name)
             {
                 case GitIntents.Add:
                     result = "All changes have been staged.";
                     break;
                 case GitIntents.Commit:
-                    intent.Slots.TryGetValue(GitSlots.CommitMessage, out slot);
+                    intent.Slots.TryGetValue(GitSlots.CommitMessage, out Slot slot);
                     argument = slot?.Value;
                     result = "I committed your changes.";
                     break;
@@ -53,9 +52,10 @@ namespace Skill.Speechlets
                     result = "Upstream branches have been pulled.";
                     break;
                 case GitIntents.Push:
-                    intent.Slots.TryGetValue(GitSlots.RemoteBranch, out slot);
-                    argument = slot?.Value;
-                    result = "I successfully pushed your changes.";
+                    intent.Slots.TryGetValue(GitSlots.RemoteBranch, out Slot branchSlot);
+                    intent.Slots.TryGetValue(GitSlots.RemoteRepository, out Slot repositorySlot);
+                    argument = repositorySlot?.Value + "/" + branchSlot?.Value;
+                    result = $"I successfully pushed your changes to {repositorySlot?.Value} {branchSlot?.Value}.";
                     break;
             }
 
