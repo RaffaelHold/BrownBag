@@ -41,7 +41,7 @@ namespace Skill.Speechlets
                     message = "2+{ENTER}";
                     break;
                 case PowerPointIntents.GoToSSML:
-                    message = "16+{ENTER}";
+                    message = "8+{ENTER}";
                     break;
 
                 default:

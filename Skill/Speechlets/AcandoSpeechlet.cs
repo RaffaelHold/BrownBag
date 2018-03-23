@@ -24,9 +24,7 @@ namespace Skill.Speechlets
                 case AcandoIntents.GetStatusHenning:
                     return BuildSpeechletResponse("Okay", "Hans Henning Hoffmann is in the office today but he is currently in a meeting with the title Alexa - git push. He will be available at 1pm", true);
                 case AcandoIntents.GetStatusProkscha:
-                    return BuildSpeechletResponse("Okay", "Waldemar Prokscha is not in the office today. His current status is offline 40 days", true);
-                case AcandoIntents.GetStatusKnuth:
-                    return BuildSpeechletResponse("Okay", "Sabine Knuth is in the office today. Her current status is online", true);
+                    return BuildSpeechletResponse("Okay", "Waldemar Prokscha is not in the office today. His current status is offline 39 days", true);
                 default:
                     throw new SpeechletException("Invalid Intent");
             }
